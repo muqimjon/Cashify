@@ -1,5 +1,4 @@
 ﻿using Cashify.Application.Common;
-using Cashify.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cashify.Infrastructure.Persistance.EntityFramework;
