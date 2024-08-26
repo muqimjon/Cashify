@@ -13,7 +13,7 @@ public sealed class Store : Auditable
 
     public long AddressId { get; set; }
     public Address Address { get; set; } = default!;
-    
+
     public long OwnerId { get; set; }
     public User Owner { get; set; } = default!;
 }
