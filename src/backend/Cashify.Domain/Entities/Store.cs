@@ -16,4 +16,10 @@ public sealed class Store : Auditable
 
     public long OwnerId { get; set; }
     public User Owner { get; set; } = default!;
+
+    public long AssetId { get; set; }
+    public Asset Image { get; set; } = default!;
+
+    public ICollection<Transaction> Transactions { get; set; } = default!;
+    public ICollection<StoreReview> Reviews { get; set; } = default!;
 }

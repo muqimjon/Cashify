@@ -1,8 +1,9 @@
 ﻿namespace Cashify.Domain.Entities;
 
+using Cashify.Domain.Common;
 using Cashify.Domain.Enums;
 
-public sealed class User
+public sealed class User : Auditable
 {
     public string FirstName { get; set; } = string.Empty;
     public string LastName { get; set; } = string.Empty;
@@ -18,4 +19,15 @@ public sealed class User
 
     public long ContactId { get; set; }
     public Contact Contact { get; set; } = default!;
+
+    public long AddressId { get; set; }
+    public Address Address { get; set; } = default!;
+
+    public long AssetId { get; set; }
+    public Asset Image { get; set; } = default!;
+
+    public Store Store { get; set; } = default!;
+    public ICollection<Transaction> Transactions { get; set; } = default!;
+    public ICollection<StoreReview> Reviews { get; set; } = default!;
+    public ICollection<Referral> Referrals { get; set; } = default!;
 }
