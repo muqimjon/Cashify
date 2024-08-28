@@ -20,14 +20,16 @@ public sealed class User : Auditable
     public long ContactId { get; set; }
     public Contact Contact { get; set; } = default!;
 
+
     public long AddressId { get; set; }
     public Address Address { get; set; } = default!;
 
     public long AssetId { get; set; }
     public Asset Image { get; set; } = default!;
 
+    public Referral? ReferredBy { get; set; }
     public Store Store { get; set; } = default!;
     public ICollection<Transaction> Transactions { get; set; } = default!;
     public ICollection<StoreReview> Reviews { get; set; } = default!;
-    public ICollection<Referral> Referrals { get; set; } = default!;
+    public ICollection<Referral> ReferralsInitiated { get; set; } = default!;
 }

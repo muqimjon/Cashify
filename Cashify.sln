@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cashify.Application", "src\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cashify.Infrastructure", "src\backend\Cashify.Infrastructure\Cashify.Infrastructure.csproj", "{3A38EB69-488C-4DD0-9ADD-245640992689}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cashify.Api", "src\backend\Cashify.Api\Cashify.Api.csproj", "{3A88E87D-0E36-4F47-885A-EAD20489B2CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{3A38EB69-488C-4DD0-9ADD-245640992689}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A38EB69-488C-4DD0-9ADD-245640992689}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A38EB69-488C-4DD0-9ADD-245640992689}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A88E87D-0E36-4F47-885A-EAD20489B2CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A88E87D-0E36-4F47-885A-EAD20489B2CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A88E87D-0E36-4F47-885A-EAD20489B2CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A88E87D-0E36-4F47-885A-EAD20489B2CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +46,7 @@ Global
 		{A25D5C85-6B8A-4648-9A14-46F8C53C77CE} = {51DA5237-E65A-43E3-AA7D-09F07F7AFD3F}
 		{87D53D2E-749A-45B4-8383-9EB834E8630B} = {51DA5237-E65A-43E3-AA7D-09F07F7AFD3F}
 		{3A38EB69-488C-4DD0-9ADD-245640992689} = {51DA5237-E65A-43E3-AA7D-09F07F7AFD3F}
+		{3A88E87D-0E36-4F47-885A-EAD20489B2CE} = {51DA5237-E65A-43E3-AA7D-09F07F7AFD3F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {84D8A158-272B-437A-800F-7BE0572D121B}

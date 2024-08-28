@@ -23,7 +23,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
     private static void ConfigureProperties(EntityTypeBuilder<User> builder)
     {
         builder.Property(u => u.FirstName)
-                       .HasMaxLength(30);
+               .HasMaxLength(30);
 
         builder.Property(u => u.LastName)
                .HasMaxLength(30);
@@ -50,8 +50,8 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
     private static void ConfigureRelationships(EntityTypeBuilder<User> builder)
     {
         builder.HasOne(u => u.Contact)
-                       .WithOne()
-                       .HasForeignKey<User>(u => u.ContactId);
+               .WithOne()
+               .HasForeignKey<User>(u => u.ContactId);
 
         builder.HasOne(u => u.Address)
                .WithOne()
@@ -69,12 +69,9 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
                .WithOne(r => r.User)
                .HasForeignKey(r => r.UserId);
 
-        builder.HasMany(u => u.Referrals)
-               .WithOne(r => r.Referrer)
-               .HasForeignKey(r => r.ReferrerId);
-
         builder.HasOne(u => u.Store)
                .WithOne(s => s.Owner)
-               .HasForeignKey<Store>(s => s.OwnerId);
+               .HasForeignKey<Store>(s => s.OwnerId)
+               .OnDelete(DeleteBehavior.NoAction);
     }
 }

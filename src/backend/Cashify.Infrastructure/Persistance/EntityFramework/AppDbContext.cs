@@ -1,9 +1,10 @@
-﻿using Cashify.Application.Common;
+﻿namespace Cashify.Infrastructure.Persistance.EntityFramework;
+
+using Cashify.Application.Common;
 using Microsoft.EntityFrameworkCore;
 
-namespace Cashify.Infrastructure.Persistance.EntityFramework;
-
-public class AppDbContext : DbContext, IAppDbContext
+public class AppDbContext(DbContextOptions<AppDbContext> options)
+    : DbContext(options), IAppDbContext
 {
     public DbSet<User> Users { get; set; }
     public DbSet<Address> Addresses { get; set; }
@@ -13,4 +14,12 @@ public class AppDbContext : DbContext, IAppDbContext
     public DbSet<Store> Stores { get; set; }
     public DbSet<StoreReview> Reviews { get; set; }
     public DbSet<Transaction> Transactions { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        // Apply all configurations from the current assembly
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+    }
 }

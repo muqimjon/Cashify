@@ -1,4 +1,4 @@
-﻿namespace RateIdeas.Infrastructure;
+﻿namespace Cashify.Infrastructure;
 
 using Cashify.Application.Common;
 using Cashify.Infrastructure.Persistance.EntityFramework;

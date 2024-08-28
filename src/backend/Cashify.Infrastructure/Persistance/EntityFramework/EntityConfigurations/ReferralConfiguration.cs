@@ -22,7 +22,7 @@ public class ReferralConfiguration : IEntityTypeConfiguration<Referral>
 
     private static void ConfigureProperties(EntityTypeBuilder<Referral> builder)
     {
-        builder.Property(r => r.Code)
+        builder.Property(r => r.ReferralCode)
                        .IsRequired()
                        .HasMaxLength(50);
 
@@ -37,11 +37,11 @@ public class ReferralConfiguration : IEntityTypeConfiguration<Referral>
     private static void ConfigureRelationships(EntityTypeBuilder<Referral> builder)
     {
         builder.HasOne(r => r.Referrer)
-                       .WithMany(u => u.Referrals)
-                       .HasForeignKey(r => r.ReferrerId);
+               .WithMany(u => u.ReferralsInitiated)
+               .HasForeignKey(r => r.ReferrerId);
 
         builder.HasOne(r => r.Referred)
-               .WithOne()
+               .WithOne(u => u.ReferredBy)
                .HasForeignKey<Referral>(r => r.ReferredId);
     }
 }

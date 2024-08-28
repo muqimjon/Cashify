@@ -4,7 +4,7 @@ using Cashify.Domain.Common;
 
 public sealed class Referral : Auditable
 {
-    public string Code { get; set; } = string.Empty;
+    public string ReferralCode { get; set; } = string.Empty;
     public bool IsRewarded { get; set; }
     public decimal RewardAmount { get; set; }
 

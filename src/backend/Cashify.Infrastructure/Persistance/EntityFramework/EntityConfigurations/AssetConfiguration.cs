@@ -20,8 +20,8 @@ public class AssetConfiguration : IEntityTypeConfiguration<Asset>
     private static void ConfigureProperties(EntityTypeBuilder<Asset> builder)
     {
         builder.Property(a => a.FileName)
-                       .IsRequired()
-                       .HasMaxLength(60);
+               .IsRequired()
+               .HasMaxLength(60);
 
         builder.Property(a => a.FilePath)
                .IsRequired()
