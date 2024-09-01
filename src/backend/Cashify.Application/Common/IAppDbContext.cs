@@ -12,4 +12,6 @@ public interface IAppDbContext
     DbSet<Store> Stores { get; }
     DbSet<StoreReview> Reviews { get; }
     DbSet<Transaction> Transactions { get; }
+
+    Task<int> SaveChangesAsync();
 }
